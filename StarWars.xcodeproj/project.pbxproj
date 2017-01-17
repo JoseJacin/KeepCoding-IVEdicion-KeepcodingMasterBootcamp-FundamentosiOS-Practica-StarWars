@@ -164,6 +164,7 @@
 		DFB15A291E2EDC300031C2A5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DFB15A2A1E2EDC3D0031C2A5 /* JSON */,
 				DFB15A2F1E2EDC7B0031C2A5 /* c3po.caf */,
 				DFB15A301E2EDC7B0031C2A5 /* c3po.jpg */,
 				DFB15A311E2EDC7B0031C2A5 /* chewie.caf */,
@@ -192,7 +193,6 @@
 				DFB15A481E2EDC7B0031C2A5 /* vader.jpg */,
 				DFB15A491E2EDC7B0031C2A5 /* yoda.caf */,
 				DFB15A4A1E2EDC7B0031C2A5 /* yoda.jpg */,
-				DFB15A2A1E2EDC3D0031C2A5 /* JSON */,
 			);
 			name = Resources;
 			sourceTree = "<group>";

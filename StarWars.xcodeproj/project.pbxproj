@@ -46,6 +46,9 @@
 		DFB15A641E2EDC7B0031C2A5 /* vader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFB15A481E2EDC7B0031C2A5 /* vader.jpg */; };
 		DFB15A651E2EDC7B0031C2A5 /* yoda.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFB15A491E2EDC7B0031C2A5 /* yoda.caf */; };
 		DFB15A661E2EDC7B0031C2A5 /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFB15A4A1E2EDC7B0031C2A5 /* yoda.jpg */; };
+		DFB477151E314E3E00D435B5 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB477141E314E3E00D435B5 /* JSONProcessing.swift */; };
+		DFB477171E3158D700D435B5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB477161E3158D700D435B5 /* Errors.swift */; };
+		DFB477191E315CC100D435B5 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB477181E315CC100D435B5 /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		DFB15A481E2EDC7B0031C2A5 /* vader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vader.jpg; sourceTree = "<group>"; };
 		DFB15A491E2EDC7B0031C2A5 /* yoda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yoda.caf; sourceTree = "<group>"; };
 		DFB15A4A1E2EDC7B0031C2A5 /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
+		DFB477141E314E3E00D435B5 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
+		DFB477161E3158D700D435B5 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		DFB477181E315CC100D435B5 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 		DFB15A201E2EAD390031C2A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFB477181E315CC100D435B5 /* FoundationExtensions.swift */,
 				DFB15A211E2EAD410031C2A5 /* App */,
 			);
 			name = Frameworks;
@@ -157,6 +164,8 @@
 				DFB15A231E2EB1580031C2A5 /* StarWarsCharacters.swift */,
 				DFB15A251E2EC5440031C2A5 /* ForceSensitives.swift */,
 				DFB15A271E2EC9080031C2A5 /* StarWarsAffiliation.swift */,
+				DFB477141E314E3E00D435B5 /* JSONProcessing.swift */,
+				DFB477161E3158D700D435B5 /* Errors.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -200,8 +209,8 @@
 		DFB15A2A1E2EDC3D0031C2A5 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				DFB15A2B1E2EDC6A0031C2A5 /* forceSensitives.json */,
 				DFB15A2C1E2EDC6A0031C2A5 /* regularCharacters.json */,
+				DFB15A2B1E2EDC6A0031C2A5 /* forceSensitives.json */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -310,11 +319,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB15A0E1E2EAD060031C2A5 /* ViewController.swift in Sources */,
+				DFB477151E314E3E00D435B5 /* JSONProcessing.swift in Sources */,
 				DFB15A281E2EC9080031C2A5 /* StarWarsAffiliation.swift in Sources */,
 				DFB15A0C1E2EAD060031C2A5 /* AppDelegate.swift in Sources */,
+				DFB477171E3158D700D435B5 /* Errors.swift in Sources */,
 				DFB15A241E2EB1580031C2A5 /* StarWarsCharacters.swift in Sources */,
 				DFB15A261E2EC5440031C2A5 /* ForceSensitives.swift in Sources */,
 				DFB15A141E2EAD060031C2A5 /* StarWars.xcdatamodeld in Sources */,
+				DFB477191E315CC100D435B5 /* FoundationExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF7B687C1E369AE900438C4B /* StarWarsUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B687B1E369AE900438C4B /* StarWarsUniverse.swift */; };
 		DFB15A0C1E2EAD060031C2A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB15A0B1E2EAD060031C2A5 /* AppDelegate.swift */; };
 		DFB15A0E1E2EAD060031C2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB15A0D1E2EAD060031C2A5 /* ViewController.swift */; };
 		DFB15A111E2EAD060031C2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB15A0F1E2EAD060031C2A5 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF7B687B1E369AE900438C4B /* StarWarsUniverse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsUniverse.swift; sourceTree = "<group>"; };
 		DFB15A081E2EAD060031C2A5 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB15A0B1E2EAD060031C2A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFB15A0D1E2EAD060031C2A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				DFB15A271E2EC9080031C2A5 /* StarWarsAffiliation.swift */,
 				DFB477141E314E3E00D435B5 /* JSONProcessing.swift */,
 				DFB477161E3158D700D435B5 /* Errors.swift */,
+				DF7B687B1E369AE900438C4B /* StarWarsUniverse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				DFB15A261E2EC5440031C2A5 /* ForceSensitives.swift in Sources */,
 				DFB15A141E2EAD060031C2A5 /* StarWars.xcdatamodeld in Sources */,
 				DFB477191E315CC100D435B5 /* FoundationExtensions.swift in Sources */,
+				DF7B687C1E369AE900438C4B /* StarWarsUniverse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

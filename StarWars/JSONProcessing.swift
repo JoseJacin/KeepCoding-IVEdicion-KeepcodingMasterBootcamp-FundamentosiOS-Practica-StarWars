@@ -160,7 +160,7 @@ func decode(forceSensitive json: JSONDictionary?) throws -> ForceSensitive {
 
 
 //MARK: - Loading
-// Función que carga un fichero en local
+// Función que carga un fichero en local y retorna un array de JSON
 func loadFromLocalFile(filename name: String,
                        bundle: Bundle = Bundle.main) throws -> JSONArray {
     

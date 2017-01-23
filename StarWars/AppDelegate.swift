@@ -13,15 +13,53 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    //MARK: - Deberes
-    func Deberes() {
-        // Crear un par de personajes y crearlos
-    }
-    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Crear una Window de verdad
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Crear una instancia del modelo
+        // Dado que hay funciones que pueden retornar error, las llamadas se tienen que encapsular dentro de un do/catch
+        do {
+            //Array de diccionarios de JSON
+            // Se cargan los personajes de StarWarsCharacters
+            var json = try loadFromLocalFile(filename: "regularCharacters.json")
+            //Se cargan los personajes de ForceSensitives
+            let force = try loadFromLocalFile(filename: "forceSensitives.json")
+            json.append(contentsOf: force)
+            
+            // Crear un array de clases de Swift
+            var chars = [StarWarsCharacter]()
+            for dict in json {
+                do {
+                    let char = try decode(starWarsCharacter: dict)
+                    chars.append(char)
+                }catch{
+                    print("Error al procesar \(dict)")
+                }
+            }
+            
+            // Crear el modelo
+            let model = StarWarsUniverse(characters: chars)
+            
+            // Crear un controlador UniverseVC
+            let uVC = UniverseTableTableViewController(model: model)
+            
+            // Meter el controlador UniverseVc dentro de un NavigationController
+            let uNav = UINavigationController(rootViewController: uVC)
+            
+            // Indicar a Window cuál es el NavigationController que tiene que mostrar
+            window?.rootViewController = uNav
+            
+            // Mostrar la window y hacer que tenga el foco
+            window?.makeKeyAndVisible()
+            
+            return true
+            
+        } catch {
+            fatalError("Error while loading Model from JSON")
+        }
+        
         return true
     }
 

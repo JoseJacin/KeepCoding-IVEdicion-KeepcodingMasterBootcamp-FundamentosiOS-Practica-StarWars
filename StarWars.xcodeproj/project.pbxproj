@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DF7B687C1E369AE900438C4B /* StarWarsUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B687B1E369AE900438C4B /* StarWarsUniverse.swift */; };
+		DF7B68801E36B3B500438C4B /* UniverseTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B687E1E36B3B500438C4B /* UniverseTableTableViewController.swift */; };
+		DF7B68811E36B3B500438C4B /* UniverseTableTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF7B687F1E36B3B500438C4B /* UniverseTableTableViewController.xib */; };
 		DFB15A0C1E2EAD060031C2A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB15A0B1E2EAD060031C2A5 /* AppDelegate.swift */; };
 		DFB15A0E1E2EAD060031C2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB15A0D1E2EAD060031C2A5 /* ViewController.swift */; };
 		DFB15A111E2EAD060031C2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB15A0F1E2EAD060031C2A5 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		DF7B687B1E369AE900438C4B /* StarWarsUniverse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsUniverse.swift; sourceTree = "<group>"; };
+		DF7B687E1E36B3B500438C4B /* UniverseTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniverseTableTableViewController.swift; sourceTree = "<group>"; };
+		DF7B687F1E36B3B500438C4B /* UniverseTableTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniverseTableTableViewController.xib; sourceTree = "<group>"; };
 		DFB15A081E2EAD060031C2A5 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB15A0B1E2EAD060031C2A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFB15A0D1E2EAD060031C2A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF7B687D1E36B36600438C4B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF7B687E1E36B3B500438C4B /* UniverseTableTableViewController.swift */,
+				DF7B687F1E36B3B500438C4B /* UniverseTableTableViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		DFB159FF1E2EAD060031C2A5 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +160,7 @@
 		DFB15A211E2EAD410031C2A5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				DF7B687D1E36B36600438C4B /* Controllers */,
 				DFB15A291E2EDC300031C2A5 /* Resources */,
 				DFB15A221E2EAD450031C2A5 /* Models */,
 				DFB15A0B1E2EAD060031C2A5 /* AppDelegate.swift */,
@@ -311,6 +325,7 @@
 				DFB15A5C1E2EDC7B0031C2A5 /* obiwan.jpg in Resources */,
 				DFB15A501E2EDC7B0031C2A5 /* greedo.jpg in Resources */,
 				DFB15A601E2EDC7B0031C2A5 /* r2-d2.jpg in Resources */,
+				DF7B68811E36B3B500438C4B /* UniverseTableTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +340,7 @@
 				DFB477151E314E3E00D435B5 /* JSONProcessing.swift in Sources */,
 				DFB15A281E2EC9080031C2A5 /* StarWarsAffiliation.swift in Sources */,
 				DFB15A0C1E2EAD060031C2A5 /* AppDelegate.swift in Sources */,
+				DF7B68801E36B3B500438C4B /* UniverseTableTableViewController.swift in Sources */,
 				DFB477171E3158D700D435B5 /* Errors.swift in Sources */,
 				DFB15A241E2EB1580031C2A5 /* StarWarsCharacters.swift in Sources */,
 				DFB15A261E2EC5440031C2A5 /* ForceSensitives.swift in Sources */,

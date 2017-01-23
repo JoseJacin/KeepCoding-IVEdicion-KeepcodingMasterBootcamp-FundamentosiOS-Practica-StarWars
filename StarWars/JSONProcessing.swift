@@ -151,7 +151,7 @@ func decode(forceSensitive json: JSONDictionary) throws -> ForceSensitive {
 
 // Función que decodifica un diccionario opcional JSON en un objeto del tipo StarWarsCharacter
 func decode(forceSensitive json: JSONDictionary?) throws -> ForceSensitive {
-    // Se valida que
+    // Se valida que el JSON que llega no sea nil
     guard let json = json else {
         throw StarWarsError.nilJSONObject
     }
@@ -159,7 +159,64 @@ func decode(forceSensitive json: JSONDictionary?) throws -> ForceSensitive {
 }
 
 
+//MARK: - Loading
+// Función que carga un fichero en local
+func loadFromLocalFile(filename name: String,
+                       bundle: Bundle = Bundle.main) throws -> JSONArray {
+    
+    if let url = bundle.url(forResource: name),
+       let data = try? Data(contentsOf: url),
+       let maybeArray = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? JSONArray,
+       let array = maybeArray {
+        return array
+    } else {
+        throw StarWarsError.jsonParsingError
+    }
+}
 
 
 
+
+// Función decode que descodifica un array de StarWarsCharacters
+/*
+ func decode(starWarsCharacter chars:[JSONDictionary]) throws -> StarWarsCharacter {
+ 
+}
+ */
+
+// Función decode que descodifica un array de ForceSensitive
+/*
+func decode(forceSensitive json:[JSONDictionary]) throws -> ForceSensitive {
+    // Se valida que el JSON que llega no sea nil
+    for json in json {
+        guard let json = json else {
+            throw StarWarsError.wrongJSONFormat
+        }
+        
+        decode(forceSensitive: json)
+    }
+ 
+ 
+    
+    
+    
+    
+    
+ 
+    if (niles.flatMap{$0}).count == 0 {
+        print("Todo vacíos")
+    }
+    
+    
+    let niles : [String?] = [nil, nil, nil]
+    if (niles.flatMap{$0}).count == 0 {
+        print("Todo vacíos")
+    }
+    
+    guard let json = json else {
+        throw StarWarsError.nilJSONObject
+    }
+    return try decode(forceSensitive: json)
+}
+*/ 
 

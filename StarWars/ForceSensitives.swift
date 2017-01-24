@@ -15,9 +15,12 @@ class ForceSensitive: StarWarsCharacter {
     let midichlorians   : Int
     
     //MARK: - Initialization
-    init(firstName: String?, lastName: String?,
-         alias: String, sound: Data,
-         photo: UIImage, wikiURL: URL,
+    init(firstName: String?,
+         lastName: String?,
+         alias: String?,
+         sound: Data,
+         photo: UIImage,
+         wikiURL: URL,
          affiliation: StarWarsAffiliation,
          midichlorians: Int) {
         
@@ -36,7 +39,7 @@ class ForceSensitive: StarWarsCharacter {
     // Inicializador de Jedi
     convenience init(jediWithFirstName: String?,
                      lastName: String?,
-                     alias: String,
+                     alias: String?,
                      soundData: Data,
                      photo: UIImage,
                      url: URL,

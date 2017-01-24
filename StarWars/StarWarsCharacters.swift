@@ -14,7 +14,7 @@ class StarWarsCharacter {
     // Stored properties (propiedades de instancia) - Propiedades que tienen instancia
     let firstName   : String?
     let lastName    : String?
-    let alias       : String
+    let alias       : String?
     let soundData   : Data
     let photo       : UIImage
     let url         : URL
@@ -65,7 +65,7 @@ class StarWarsCharacter {
     // Inicializador designado (Si no se indica que es el de conveniencia, es el designado)
     init(firstName: String?,
          lastName: String?,
-         alias: String,
+         alias: String?,
          sound: Data,
          photo: UIImage,
          wikiURL: URL,

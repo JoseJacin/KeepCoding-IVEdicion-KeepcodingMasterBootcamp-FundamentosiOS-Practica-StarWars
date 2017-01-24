@@ -54,13 +54,10 @@ func decode(starWarsCharacter json: JSONDictionary) throws -> StarWarsCharacter 
             throw StarWarsError.resourcePointedByURLNotReachable
     }
     
-    guard let alias = json["alias"] as? String else {
-        throw StarWarsError.wrongJSONFormat
-    }
-    
     // Se ha comprobado todo lo más peligroso
     let firstName = json["firstName"] as? String
     let lastName = json["lastName"] as? String
+    let alias = json["alias"] as? String
     
     // Solo queda la affiliation
     if let affiliationName = json["affiliation"] as? String {
@@ -111,10 +108,6 @@ func decode(forceSensitive json: JSONDictionary) throws -> ForceSensitive {
             throw StarWarsError.resourcePointedByURLNotReachable
     }
     
-    guard let alias = json["alias"] as? String else {
-        throw StarWarsError.wrongJSONFormat
-    }
-    
     guard let jedi = json["jedi"] as? Bool,
           let sith = json["sith"] as? Bool,
           let mid = json["midichlorians"] as? Int else {
@@ -129,11 +122,11 @@ func decode(forceSensitive json: JSONDictionary) throws -> ForceSensitive {
     // Se ha comprobado todo lo más peligroso
     let firstName = json["firstName"] as? String
     let lastName = json["lastName"] as? String
+    let alias = json["alias"] as? String
     
     // Solo queda la affiliation
     if let affiliationName = json["affiliation"] as? String {
         // Todo ha salido bien
-        
         
         // Se crea el StarWarsCharacter
         return ForceSensitive(firstName: firstName,

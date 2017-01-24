@@ -44,5 +44,10 @@ class CharacterViewController: UIViewController {
     
     // Acción que abre Wikipedia con la información del StarWarsCharacter
     @IBAction func displayWikipedia(_ sender: UIBarButtonItem) {
+        // Se crea un WikiVC
+        let wVC = WikiViewController(model: model)
+        
+        // Hacer un push (Se mete dentro de un navigationController)
+        navigationController?.pushViewController(wVC, animated: true)
     }
 }

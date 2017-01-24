@@ -26,7 +26,7 @@ class StarWarsCharacter {
         get {
             // guard va creando un entorno en el que no hay opcionales vacíos. Ejecuta el contenido cuando la variable analizada es vacío
             // Las constantes son visibles dentro del guard pero también dentro del get
-            /*
+            
             guard let firstName = firstName else {
                 return lastName
             }
@@ -36,9 +36,10 @@ class StarWarsCharacter {
             }
             
             return "\(firstName) \(lastName)"
-            */
+            
             
             //Para comprobar si el primer nombre y el segundo nombre es nil se retorna nil, sino, retorna los valores del primer y segundo apellido
+            /*
             let first = firstName
             let last = lastName
             let noName = ""
@@ -46,6 +47,7 @@ class StarWarsCharacter {
             let characterName = first ?? last ?? noName
             
             return "\(characterName)"
+            */
         }
         
         /*

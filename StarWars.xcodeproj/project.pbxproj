@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DF47B54F1E37E8040014775B /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47B54D1E37E8040014775B /* CharacterViewController.swift */; };
 		DF47B5501E37E8040014775B /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF47B54E1E37E8040014775B /* CharacterViewController.xib */; };
+		DF47B5531E3807920014775B /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47B5511E3807920014775B /* WikiViewController.swift */; };
+		DF47B5541E3807920014775B /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF47B5521E3807920014775B /* WikiViewController.xib */; };
 		DF7B687C1E369AE900438C4B /* StarWarsUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B687B1E369AE900438C4B /* StarWarsUniverse.swift */; };
 		DF7B68801E36B3B500438C4B /* UniverseTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B687E1E36B3B500438C4B /* UniverseTableTableViewController.swift */; };
 		DF7B68811E36B3B500438C4B /* UniverseTableTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF7B687F1E36B3B500438C4B /* UniverseTableTableViewController.xib */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		DF47B54D1E37E8040014775B /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		DF47B54E1E37E8040014775B /* CharacterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
+		DF47B5511E3807920014775B /* WikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		DF47B5521E3807920014775B /* WikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
 		DF7B687B1E369AE900438C4B /* StarWarsUniverse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsUniverse.swift; sourceTree = "<group>"; };
 		DF7B687E1E36B3B500438C4B /* UniverseTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniverseTableTableViewController.swift; sourceTree = "<group>"; };
 		DF7B687F1E36B3B500438C4B /* UniverseTableTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniverseTableTableViewController.xib; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				DF7B687F1E36B3B500438C4B /* UniverseTableTableViewController.xib */,
 				DF47B54D1E37E8040014775B /* CharacterViewController.swift */,
 				DF47B54E1E37E8040014775B /* CharacterViewController.xib */,
+				DF47B5511E3807920014775B /* WikiViewController.swift */,
+				DF47B5521E3807920014775B /* WikiViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				DFB15A531E2EDC7B0031C2A5 /* kylo.caf in Resources */,
 				DFB15A571E2EDC7B0031C2A5 /* luke.caf in Resources */,
 				DFB15A111E2EAD060031C2A5 /* Main.storyboard in Resources */,
+				DF47B5541E3807920014775B /* WikiViewController.xib in Resources */,
 				DFB15A2E1E2EDC6A0031C2A5 /* regularCharacters.json in Resources */,
 				DF47B5501E37E8040014775B /* CharacterViewController.xib in Resources */,
 				DFB15A551E2EDC7B0031C2A5 /* leia.caf in Resources */,
@@ -347,6 +354,7 @@
 				DFB15A0E1E2EAD060031C2A5 /* ViewController.swift in Sources */,
 				DFB477151E314E3E00D435B5 /* JSONProcessing.swift in Sources */,
 				DFB15A281E2EC9080031C2A5 /* StarWarsAffiliation.swift in Sources */,
+				DF47B5531E3807920014775B /* WikiViewController.swift in Sources */,
 				DFB15A0C1E2EAD060031C2A5 /* AppDelegate.swift in Sources */,
 				DF7B68801E36B3B500438C4B /* UniverseTableTableViewController.swift in Sources */,
 				DFB477171E3158D700D435B5 /* Errors.swift in Sources */,

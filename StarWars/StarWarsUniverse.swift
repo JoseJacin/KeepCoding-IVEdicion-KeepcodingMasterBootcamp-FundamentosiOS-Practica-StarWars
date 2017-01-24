@@ -49,9 +49,14 @@ class StarWarsUniverse {
     
     // Función que retorna un personaje en concreto que se encuentra dentro de una afiliación
     func character(atIndex index: Int,
-                   forAffiliation affiliation: StarWarsAffiliation) -> StarWarsCharacter {
+                   forAffiliation affiliation: StarWarsAffiliation) throws -> StarWarsCharacter {
         // El personaje nº index de la afiliación affiliation
-        let chars = dict[affiliation]!
+        guard index >= 0,
+              index <= characterCount(forAffiliation: affiliation),
+              let chars = dict[affiliation] else {
+                throw StarWarsError.indexOutOfBounds
+        }
+        
         let char = chars[index]
         return char
     }

@@ -15,4 +15,5 @@ enum StarWarsError : Error {
     case wrongJSONFormat
     case nilJSONObject
     case jsonParsingError
+    case indexOutOfBounds
 }

@@ -48,24 +48,42 @@ class UniverseTableTableViewController: UITableViewController {
         // Averiguar la afilicación
         let aff = getAffiliation(forSection: indexPath.section)
         
-        // Averiguar quién es el personaje
-        let char = model.character(atIndex: indexPath.row, forAffiliation: aff)
-        
-        // Crear la celda
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
-        
-        if cell == nil {
-            // El opcional está vacío y toca crear la celda desde cero
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        var cell: UITableViewCell?
+
+        do {
+            // Averiguar quién es el personaje
+            //let char = try model.character(atIndex: indexPath.row, forAffiliation: aff)
+            let char = try model.character(atIndex: 10, forAffiliation: aff)
+            
+            // Crear la celda
+            cell = tableView.dequeueReusableCell(withIdentifier: cellId)
+            
+            if cell == nil {
+                // El opcional está vacío y toca crear la celda desde cero
+                cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+            }
+            
+            // Configurar la celda recién creada
+            cell?.imageView?.image = char.photo
+            cell?.textLabel?.text = char.alias
+            cell?.detailTextLabel?.text = char.name
+        }catch{
+            print("Error from obtain character")
         }
         
-        // Configurar la celda recién creada
-        cell?.imageView?.image = char.photo
-        cell?.textLabel?.text = char.alias
-        cell?.detailTextLabel?.text = char.name
-        
         // Devolver la celda recién configurada
-        return cell! // En este caso sí se puede usar el "por cojones"
+        /*
+        if cell == nil {
+            fatalError("Error from obtain character")
+        } else {
+            return cell!
+        }
+        */// En este caso sí se puede usar el "por cojones"
+        
+        guard let cell2 = cell else {
+            return (cell?)!
+        }
+        return cell2
     }
     
     //MARK: - Utils

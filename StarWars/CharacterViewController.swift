@@ -12,7 +12,7 @@ class CharacterViewController: UIViewController {
 
     //MARK: - Properties
     @IBOutlet weak var photoView: UIImageView!
-    let model: StarWarsCharacter
+    var model: StarWarsCharacter
     
     //MARK: - Initialization
     init(model: StarWarsCharacter) {
@@ -51,5 +51,18 @@ class CharacterViewController: UIViewController {
         
         // Hacer un push (Se mete dentro de un navigationController)
         navigationController?.pushViewController(wVC, animated: true)
+    }
+}
+
+//MARK: - Protocols
+extension CharacterViewController: UniverseTableTableViewControllerDelegate {
+    
+    func universeTableViewController(_ uVC: UniverseTableTableViewController, didSelectCharacter char: StarWarsCharacter) {
+        
+        // Cambiamos el modelo
+        model = char
+        
+        // Sincronizamos la vista con el modelo
+        syncViewWithModel()
     }
 }

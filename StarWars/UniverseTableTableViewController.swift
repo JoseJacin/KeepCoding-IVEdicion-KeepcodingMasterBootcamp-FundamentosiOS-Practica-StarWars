@@ -12,6 +12,7 @@ class UniverseTableTableViewController: UITableViewController {
     
     //MARK: - Properties
     let model: StarWarsUniverse
+    weak var delegate: UniverseTableTableViewControllerDelegate? = nil
     
     //MARK: - Initialization
     init(model: StarWarsUniverse) {
@@ -32,11 +33,8 @@ class UniverseTableTableViewController: UITableViewController {
         // Descubrir de qué personaje me hablas
         let char = model.character(atIndex: indexPath.row,forAffiliation: aff)
         
-        // Crear un CharacterVC
-        let charVC = CharacterViewController(model: char)
-        
-        // Pushearlo
-        self.navigationController?.pushViewController(charVC, animated: true)
+        // Avisar al Delegado
+        delegate?.universeTableViewController(self, didSelectCharacter: char)
     }
     
     // MARK: - Table view data source
@@ -103,3 +101,21 @@ class UniverseTableTableViewController: UITableViewController {
         return aff
     }
 }
+
+//MARK - UniverseTableTableViewControllerDelegate
+//Protocolo de Delegado de UniverseTableTableViewController
+protocol UniverseTableTableViewControllerDelegate: class {
+    // Métodos should (que piden permiso)
+    
+    // Métodos will (lo voy a hacer)
+    
+    // Métodos did (ya lo he hecho, que lo sepas)
+    // Declaración de la función del Delegado que se ejecuta cuando se pulsa una celda en UniverseTableTableViewController
+    func universeTableViewController(_ uVC: UniverseTableTableViewController, didSelectCharacter char: StarWarsCharacter)
+}
+
+
+
+
+
+

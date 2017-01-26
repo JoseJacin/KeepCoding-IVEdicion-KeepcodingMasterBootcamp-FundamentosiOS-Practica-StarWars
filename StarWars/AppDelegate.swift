@@ -56,6 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Meter el controlador CharacterVC dentro de un NavigationController
             let cNav = UINavigationController(rootViewController: charVC)
             
+            // Asignamos delegados
+            uVC.delegate = charVC
             
             // Crear un SplitViewController
             let splitVC = UISplitViewController()

@@ -25,6 +25,8 @@ class CharacterViewController: UIViewController {
     }
 
     //MARK: - View Lifecycle
+    // Función que se ejecuta cuando la vista se ha cargado en memoria.
+    // En el ciclo de vida de la vista, esta función solo va a ejecutarse una vez
     override func viewDidLoad() {
         super.viewDidLoad()
         syncViewWithModel()

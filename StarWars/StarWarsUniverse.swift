@@ -13,7 +13,7 @@ import UIKit
 class StarWarsUniverse {
     // MARK: - Utility types
     typealias StarWarsArray = [StarWarsCharacter]
-    fileprivate typealias StarWarsDictionary = [StarWarsAffiliation: StarWarsArray]
+    typealias StarWarsDictionary = [StarWarsAffiliation: StarWarsArray]
     
     // MARK: - Properties
     fileprivate var dict: StarWarsDictionary = StarWarsDictionary()
@@ -26,6 +26,11 @@ class StarWarsUniverse {
         // Nos pateamos el array de StarWars y asignamos según afiliación
         for each in chars {
             dict[each.affiliation]?.append(each)
+        }
+        
+        // Ordenamos los personajes dentro de cada afilicación
+        for (affiliation, characters) in dict {
+            dict[affiliation] = characters.sorted()
         }
     }
     
@@ -64,7 +69,7 @@ class StarWarsUniverse {
     
     // MARK: - Utils
     // Función que asigna la afilización (clave del dictionary a un array StarWarsArray vacío
-    fileprivate func makeEmptyAffiliations() -> StarWarsDictionary {
+    func makeEmptyAffiliations() -> StarWarsDictionary {
         var d = StarWarsDictionary()
         
         d[.rebelAlliance] = StarWarsArray()
@@ -74,10 +79,6 @@ class StarWarsUniverse {
         
         return d
     }
-    
-
-    
-    
 }
 
 

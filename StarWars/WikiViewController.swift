@@ -27,6 +27,8 @@ class WikiViewController: ViewController {
     }
     
     //MARK: - View Lifecycle
+    // Función que se ejecuta cuando la vista se va a mostrar.
+    // En el ciclo de vida de la vista, esta función puede ejecutarse varias veces
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         syncViewWithModel()

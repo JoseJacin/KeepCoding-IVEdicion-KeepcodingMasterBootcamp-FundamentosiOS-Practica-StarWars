@@ -42,14 +42,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Crear el modelo
             let model = StarWarsUniverse(characters: chars)
             
+            
             // Crear un controlador UniverseVC
             let uVC = UniverseTableTableViewController(model: model)
             
-            // Meter el controlador UniverseVc dentro de un NavigationController
+            // Meter el controlador UniverseVC dentro de un NavigationController
             let uNav = UINavigationController(rootViewController: uVC)
             
+            
+            // Crear un controlador CharacterVC
+            let charVC = CharacterViewController(model: model.character(atIndex: 0, forAffiliation: .galacticEmpire))
+            
+            // Meter el controlador CharacterVC dentro de un NavigationController
+            let cNav = UINavigationController(rootViewController: charVC)
+            
+            
+            // Crear un SplitViewController
+            let splitVC = UISplitViewController()
+            splitVC.viewControllers = [uNav, cNav] //Se añaden los dos NavigationController
+            
+            
             // Indicar a Window cuál es el NavigationController que tiene que mostrar
-            window?.rootViewController = uNav
+            window?.rootViewController = splitVC
             
             // Mostrar la window y hacer que tenga el foco
             window?.makeKeyAndVisible()

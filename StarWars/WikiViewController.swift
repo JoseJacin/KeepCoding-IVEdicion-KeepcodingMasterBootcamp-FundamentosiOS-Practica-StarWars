@@ -14,7 +14,7 @@ class WikiViewController: ViewController {
     @IBOutlet weak var browser: UIWebView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    let model : StarWarsCharacter
+    var model : StarWarsCharacter
     
     //MARK: - Initialization
     init(model: StarWarsCharacter) {
@@ -33,6 +33,16 @@ class WikiViewController: ViewController {
         super.viewWillAppear(animated)
         syncViewWithModel()
         browser.delegate = self
+        
+        // Se da de alta de las notificaciones
+        subcribe()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Se da de baja de las notificaciones
+        unsubscribe()
     }
 
     //MARK: - Sync model View
@@ -64,5 +74,40 @@ extension WikiViewController: UIWebViewDelegate {
         
         // Se despinea (Se para la animación)
         spinner.stopAnimating()
+    }
+}
+
+//MARK: - Notifications
+extension WikiViewController {
+    // Función que se suscribe (da de alta) a una notificación
+    func subcribe() {
+        // Se crea una Referencia al NotificationCenter
+        let nc = NotificationCenter.default
+        
+        // Se da de alta en una notificación
+        // object: Se refiere al remitente, normalmente es nil)
+        // queue: Hebra (hilo) en el que se ejecutará la notificación. Si es en la cola principal (main) o en segundo plano
+        // using: Es el código que se va a ejecutar cuando se reciba la notificación. Se suele hacer mediante una clausura (trailing closure)
+        nc.addObserver(forName: UniverseTableTableViewController.notificationName, object: nil, queue: OperationQueue.main)
+            { (note: Notification) in
+                // Se extrae el personaje de la notificación
+                let userInfo = note.userInfo
+                let char = userInfo?[UniverseTableTableViewController.characterKey]
+                
+                // Se cambia el modelo
+                self.model = char as! StarWarsCharacter
+                
+                // Se actualizan las vistas
+                self.syncViewWithModel()
+        }
+    }
+    
+    // Función que se desuscribe (da de baja) de una notificación
+    func unsubscribe() {
+        // Se crea una Referencia al NotificationCenter
+        let nc = NotificationCenter.default
+        
+        // Se da de baja de una notificación
+        nc.removeObserver(self)
     }
 }
